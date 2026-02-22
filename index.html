@@ -41,6 +41,12 @@
               <label><input type="checkbox" name="strength" value="верность" /> Верность</label>
               <label><input type="checkbox" name="strength" value="смелость" /> Смелость</label>
               <label><input type="checkbox" name="strength" value="выдержка" /> Выдержка</label>
+              <label><input type="checkbox" name="strength" value="харизма" /> Харизма</label>
+              <label><input type="checkbox" name="strength" value="чувство юмора" /> Чувство юмора</label>
+              <label><input type="checkbox" name="strength" value="ответственность" /> Ответственность</label>
+              <label><input type="checkbox" name="strength" value="целеустремлённость" /> Целеустремлённость</label>
+              <label><input type="checkbox" name="strength" value="надёжность" /> Надёжность</label>
+              <label><input type="checkbox" name="strength" value="самодисциплина" /> Самодисциплина</label>
             </div>
           </div>
 
@@ -67,24 +73,26 @@
 
       <div class="card card--output hidden" id="profileCard">
         <div class="card__title">Анкета героя</div>
-        <div class="profile">
-          <div class="profile__row">
-            <span class="label">Сильные стороны</span>
-            <span class="value" id="outStrength">—</span>
+          <div class="profile">
+            <div class="profile__row">
+              <span class="label">Сильные стороны</span>
+              <span class="value" id="outStrength">—</span>
+            </div>
+            <div class="profile__hint">По-моему, ты себя не недооцениваешь.</div>
+            <div class="profile__row">
+              <span class="label">Важно в жизни</span>
+              <span class="value" id="outValues">—</span>
+            </div>
+            <div class="profile__hint">Всё это у тебя прекрасно получается.</div>
+            <div class="profile__row">
+              <span class="label">Цель</span>
+              <span class="value" id="outGoal">—</span>
+            </div>
+            <div class="profile__hint">Ты на верном пути! Ты точно достигнешь своих целей.</div>
           </div>
-          <div class="profile__row">
-            <span class="label">Важно в жизни</span>
-            <span class="value" id="outValues">—</span>
-          </div>
-          <div class="profile__row">
-            <span class="label">Цель</span>
-            <span class="value" id="outGoal">—</span>
-          </div>
+          <button class="btn btn--primary" data-next="step-feats">Продолжить путь</button>
         </div>
-        <p class="card__note">Минималистичная анкета детской мечты — но для взрослого героя.</p>
-        <button class="btn btn--primary" data-next="step-feats">Продолжить путь</button>
       </div>
-    </div>
   </section>
 
   <section class="step" id="step-feats">
@@ -134,19 +142,8 @@
         <p>Поздравляю тебя с 23 февраля! Я приготовила для тебя несколько маленьких подарков.</p>
       </div>
       <div class="gifts" id="giftList"></div>
-      <div class="hint">Предъявите сертификат для получения подарка</div>
     </div>
   </section>
-
-  <div class="modal" id="giftModal" aria-hidden="true">
-    <div class="modal__backdrop" data-close="true"></div>
-    <div class="modal__content">
-      <button class="modal__close" data-close="true">×</button>
-      <h3 id="modalTitle">Сертификат</h3>
-      <p id="modalBody"></p>
-      <span class="modal__note">Не забудьте сохранить сертификат</span>
-    </div>
-  </div>
 
   <script src="script.js"></script>
 </body>

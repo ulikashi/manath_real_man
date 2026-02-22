@@ -214,6 +214,13 @@ input[type="text"] {
   text-align: right;
 }
 
+.profile__hint {
+  margin: -6px 0 10px;
+  font-size: 12px;
+  color: var(--steel);
+  letter-spacing: 0.05em;
+}
+
 .card__title {
   font-family: "Bebas Neue", sans-serif;
   letter-spacing: 0.2em;
@@ -295,23 +302,26 @@ input[type="text"] {
 
 .gift__box {
   position: relative;
-  height: 140px;
+  height: 150px;
   border-radius: 14px;
   background: linear-gradient(145deg, #ff6b9f, #ff95b8 60%, #f3b3cc);
   box-shadow: inset 0 0 18px rgba(255, 255, 255, 0.25), 0 12px 25px rgba(0, 0, 0, 0.35);
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .gift__lid {
   position: absolute;
-  top: -18px;
-  left: -6px;
-  right: -6px;
-  height: 50px;
+  top: -12px;
+  left: -8px;
+  right: -8px;
+  height: 58px;
   background: linear-gradient(145deg, #ff3f82, #ff7aaa 60%);
   border-radius: 16px;
   transform-origin: left bottom;
-  transition: transform 0.35s ease;
+  transition: transform 0.35s ease, opacity 0.35s ease;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.35);
 }
 
@@ -335,75 +345,26 @@ input[type="text"] {
   border-radius: 14px;
 }
 
-.gift__label {
-  margin-top: 14px;
-  font-family: "Bebas Neue", sans-serif;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  font-size: 14px;
-}
-
 .gift.opened .gift__lid {
-  transform: rotate(-28deg) translateX(-10px);
+  transform: translateY(-80px) rotate(-15deg);
+  opacity: 0;
 }
 
-.hint {
-  margin-top: 24px;
-  text-align: center;
-  font-size: 12px;
+.gift__text {
+  font-family: "Bebas Neue", sans-serif;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--steel);
+  font-size: 16px;
+  color: #2a1a22;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.modal {
-  position: fixed;
-  inset: 0;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 10;
-}
-
-.modal.active {
-  display: flex;
-}
-
-.modal__backdrop {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.75);
-}
-
-.modal__content {
-  position: relative;
-  background: #0f131b;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  padding: 30px 34px;
-  max-width: 460px;
-  text-align: center;
-  z-index: 1;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
-}
-
-.modal__close {
-  position: absolute;
-  top: 8px;
-  right: 10px;
-  background: transparent;
-  color: #fff;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-.modal__note {
-  display: inline-block;
-  margin-top: 16px;
-  font-size: 12px;
-  color: var(--steel);
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
+.gift.opened .gift__text {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @media (max-width: 1000px) {

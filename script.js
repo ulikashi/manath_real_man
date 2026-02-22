@@ -107,23 +107,20 @@ featNext.addEventListener("click", () => {
 renderFeat();
 
 const giftData = [
-  { label: "Банальный", content: "Сертификат на носки" },
-  { label: "Съедобный", content: "Сертификат на пюре" },
-  { label: "Фотографичный", content: "Сертификат на фотокарточку" },
-  { label: "Виртуальный", content: "Сертификат на подписку на нейросеть" },
-  { label: "Светящийся", content: "LED-лента" },
-  { label: "Игровой", content: "Сертификат на подписку pass royal" },
-  { label: "Нежный", content: "Сертификат на поцелуй" },
-  { label: "Горячий", content: "Сертификат на поцелуй ниже" },
-  { label: "Желанный", content: "Сертификат на абсолютно любое желание" },
-  { label: "Правдивый", content: "Сертификат на максимально полный и честный ответ на любые 10 вопросов" },
-  { label: "Чистый", content: "Сертификат на гель для душа" },
+  { label: "Банальный" },
+  { label: "Съедобный" },
+  { label: "Фотографичный" },
+  { label: "Виртуальный" },
+  { label: "Светящийся" },
+  { label: "Игровой" },
+  { label: "Нежный" },
+  { label: "Горячий" },
+  { label: "Желанный" },
+  { label: "Правдивый" },
+  { label: "Чистый" },
 ];
 
 const giftList = document.getElementById("giftList");
-const modal = document.getElementById("giftModal");
-const modalTitle = document.getElementById("modalTitle");
-const modalBody = document.getElementById("modalBody");
 
 function renderGifts() {
   giftList.innerHTML = "";
@@ -135,16 +132,12 @@ function renderGifts() {
         <div class="gift__lid"></div>
         <div class="gift__ribbon"></div>
         <div class="gift__bow"></div>
+        <div class="gift__text">${gift.label}</div>
       </div>
-      <div class="gift__label">${gift.label}</div>
     `;
 
     item.addEventListener("click", () => {
       item.classList.add("opened");
-      modalTitle.textContent = gift.label;
-      modalBody.textContent = gift.content;
-      modal.classList.add("active");
-      modal.setAttribute("aria-hidden", "false");
     });
 
     giftList.appendChild(item);
@@ -152,10 +145,3 @@ function renderGifts() {
 }
 
 renderGifts();
-
-modal.addEventListener("click", (e) => {
-  if (e.target.dataset.close === "true") {
-    modal.classList.remove("active");
-    modal.setAttribute("aria-hidden", "true");
-  }
-});
