@@ -118,6 +118,7 @@ const giftData = [
   { label: "Желанный" },
   { label: "Правдивый" },
   { label: "Чистый" },
+  { label: "Фотогеничный" },
 ];
 
 const giftList = document.getElementById("giftList");
