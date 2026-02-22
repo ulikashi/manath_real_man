@@ -82,7 +82,7 @@ let featIndex = 0;
 
 function renderFeat() {
   const feat = feats[featIndex];
-  featImage.src = feat.image;
+  featImage.src = `${feat.image}?v=${featIndex}`;
   featImage.alt = feat.title;
   featTitle.textContent = feat.title;
   featText.textContent = feat.text;
