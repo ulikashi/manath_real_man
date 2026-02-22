@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Героический сайт для настоящего мужчины</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="grain"></div>
+  <header class="hero" id="top">
+    <div class="hero__inner">
+      <div class="hero__badge">23 февраля</div>
+      <h1>Ты – настоящий герой. Этот сайт посвящен тебе.</h1>
+      <p class="hero__sub">
+        Поздравление для настоящего мужчины. Ты – лучший пример силы, решимости и мужества.
+      </p>
+      <div class="hero__actions">
+        <button class="btn" data-scroll="#form">Начать приключение</button>
+        <button class="btn btn--ghost" data-scroll="#gifts">Получить свой подарок</button>
+      </div>
+      <div class="hero__meta">
+        <span>Сталь. Сила. Верность.</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" id="form">
+      <div class="section__head">
+        <h2>Путь героя</h2>
+        <p>Заполни анкету — и она станет персональным посвящением.</p>
+      </div>
+      <div class="form-grid">
+        <form id="heroForm" class="card">
+          <div class="field-group">
+            <h3>Какие твои сильные стороны?</h3>
+            <label><input type="checkbox" name="strength" value="физическая сила" /> Физическая сила</label>
+            <label><input type="checkbox" name="strength" value="умение решать проблемы" /> Умение решать проблемы</label>
+            <label><input type="checkbox" name="strength" value="лидерские качества" /> Лидерские качества</label>
+            <label><input type="checkbox" name="strength" value="верность" /> Верность</label>
+            <label><input type="checkbox" name="strength" value="смелость" /> Смелость</label>
+            <label><input type="checkbox" name="strength" value="выдержка" /> Выдержка</label>
+          </div>
+
+          <div class="field-group">
+            <h3>Что для тебя важно в жизни?</h3>
+            <label><input type="checkbox" name="values" value="семья" /> Семья</label>
+            <label><input type="checkbox" name="values" value="работа" /> Работа</label>
+            <label><input type="checkbox" name="values" value="спорт" /> Спорт</label>
+            <label><input type="checkbox" name="values" value="путешествия" /> Путешествия</label>
+            <label><input type="checkbox" name="values" value="друзья" /> Друзья</label>
+            <label><input type="checkbox" name="values" value="саморазвитие" /> Саморазвитие</label>
+          </div>
+
+          <div class="field-group">
+            <h3>Твоя главная цель на данный момент</h3>
+            <input type="text" name="goal" placeholder="Например: покорить новую вершину" />
+          </div>
+
+          <button class="btn" type="submit">Готово</button>
+        </form>
+
+        <div class="card card--output" id="profileCard">
+          <div class="card__title">Анкета героя</div>
+          <div class="profile">
+            <div class="profile__row">
+              <span class="label">Сильные стороны</span>
+              <span class="value" id="outStrength">—</span>
+            </div>
+            <div class="profile__row">
+              <span class="label">Важно в жизни</span>
+              <span class="value" id="outValues">—</span>
+            </div>
+            <div class="profile__row">
+              <span class="label">Цель</span>
+              <span class="value" id="outGoal">—</span>
+            </div>
+          </div>
+          <p class="card__note">Минималистичная анкета детской мечты — но для взрослого героя.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="feats">
+      <div class="section__head">
+        <h2>Ты стал мастером во многих делах</h2>
+        <p>
+          Твоя решимость и стремление к совершенству сделали тебя настоящим мастером во многом.
+          Ты смог достичь невероятных высот в таком количестве дел, которые не поместятся ни в один список.
+          Это вдохновляет меня.
+        </p>
+      </div>
+      <div class="feats">
+        <article class="feat">
+          <img src="photo/IMG_6226.PNG" alt="Гений технологий" />
+          <h3>Гений компьютерных технологий</h3>
+          <p>Ты круто разбираешься в технике и новых технологиях, отлично владеешь программированием.</p>
+        </article>
+        <article class="feat">
+          <img src="photo/IMG_6227.PNG" alt="Главный качек" />
+          <h3>Главный качек в спортзале</h3>
+          <p>Ты невероятно сильный и накачанный мужчина, твоим мышцам позавидуют многие.</p>
+        </article>
+        <article class="feat">
+          <img src="photo/IMG_6230.PNG" alt="Самый красивый" />
+          <h3>Красивее любой модели</h3>
+          <p>Ты очень красивый и стильный, с любой прической и в любой одежде я не могу оторвать от тебя глаз.</p>
+        </article>
+        <article class="feat">
+          <img src="photo/IMG_6231.PNG" alt="Самый умный" />
+          <h3>Самый умный</h3>
+          <p>Твоей начитанности и развитости можно только завидовать. Я не встречала собеседника интереснее чем ты.</p>
+        </article>
+        <article class="feat">
+          <img src="photo/IMG_6234.PNG" alt="Лучший парень" />
+          <h3>Лучший парень</h3>
+          <p>Ты очень заботливый и милый, мне очень с тобой повезло.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="final">
+      <div class="final card">
+        <h2>Ты – Герой и настоящий мужчина!</h2>
+        <p>
+          Этот сайт создан, чтобы напомнить, что ты настоящий мужчина, с удивительными достижениями
+          и потенциалом для великих подвигов. Ты достоин всего лучшего. Я очень тебя люблю!
+        </p>
+        <button class="btn" data-scroll="#gifts">Получить свой подарок</button>
+      </div>
+    </section>
+
+    <section class="section" id="gifts">
+      <div class="section__head">
+        <h2>Героические подарки для настоящего мужчины</h2>
+        <p>Поздравляю тебя с 23 февраля! Я приготовила для тебя несколько маленьких подарков.</p>
+      </div>
+      <div class="gifts" id="giftList"></div>
+      <div class="hint">Предъявите сертификат для получения подарка</div>
+    </section>
+  </main>
+
+  <div class="modal" id="giftModal" aria-hidden="true">
+    <div class="modal__backdrop" data-close="true"></div>
+    <div class="modal__content">
+      <button class="modal__close" data-close="true">×</button>
+      <h3 id="modalTitle">Сертификат</h3>
+      <p id="modalBody"></p>
+      <span class="modal__note">Не забудьте сохранить сертификат</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
